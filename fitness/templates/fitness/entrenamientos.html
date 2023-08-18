@@ -1,0 +1,37 @@
+{% extends 'fitness/base.html' %}
+{% load static %}
+
+{% block 1 %}
+    Training plans
+{% endblock 1 %}
+
+{% block 2 %}
+<h1>Cursos</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>entrenamiento</th>
+            <th>duracion</th>
+            <th>tipo</th>
+            <th>precio</th>
+            <th>descripcion</th>
+        </tr>
+    </thead>
+    <tbody>
+{% for e in entrenamientos  %}
+        <tr>
+            <td>{{ e.id }}</td>
+            <td>{{ e.entrenamiento }}</td>
+            <td>{{ e.duracion }}</td>
+            <td>{{ e.tipo }}</td>
+            <td>{{ e.precio }}</td>
+            <td>{{ e.descripcion }}</td>
+        </tr>
+{% endfor %}
+    </tbody>
+</table>
+
+{% endblock 2 %}
+
